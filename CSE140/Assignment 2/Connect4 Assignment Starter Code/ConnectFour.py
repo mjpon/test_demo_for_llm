@@ -115,6 +115,12 @@ class Game:
 
 
     def game_completed(self, player_num):
+        """
+        The function "game_completed" is used to indicate that a game has been completed by a player.
+        
+        :param player_num: The player number is an integer that represents the player who completed the
+        game
+        """
         player_win_str = '{0}{0}{0}{0}'.format(player_num)
         board = self.board
         to_str = lambda a: ''.join(a.astype(str))
