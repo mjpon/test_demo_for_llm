@@ -86,6 +86,15 @@ class Game:
                 self.player_string.configure(text=self.players[self.current_turn].player_string)
 
     def update_board(self, move, player_num):
+        """
+        The function updates the game board with the player's move.
+        
+        :param move: The move parameter represents the position on the board where the player wants to
+        make their move. It can be a number or a tuple representing the row and column of the position
+        on the board
+        :param player_num: The player number is an integer that represents the player making the move.
+        It can be used to determine which player's turn it is and to update the board accordingly
+        """
         if 0 in self.board[:,move]:
             update_row = -1
             for row in range(1, self.board.shape[0]):
