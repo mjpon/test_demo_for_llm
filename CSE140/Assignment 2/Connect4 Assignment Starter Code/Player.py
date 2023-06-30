@@ -158,6 +158,25 @@ class AIPlayer:
     
     
     def max_value(self, board, alpha, beta, depth):
+        """
+        The function `max_value` is a part of a minimax algorithm implementation in Python, where it
+        calculates the maximum value for a given board state, alpha-beta prunes unnecessary branches,
+        and returns the best action along with the maximum value.
+        
+        :param board: The "board" parameter represents the current state of the game board. It is a data
+        structure that holds the positions and values of the game pieces
+        :param alpha: Alpha is the best value that the maximizing player (in this case, the AI) can
+        guarantee at this point or later in the game. It is the lower bound of the possible values for
+        the current state
+        :param beta: The parameter "beta" is used in the alpha-beta pruning algorithm. It represents the
+        maximum value that the maximizing player (in this case, the "self" player) is guaranteed to
+        achieve. The algorithm uses this value to determine whether it can prune certain branches of the
+        game tree, i.e.,
+        :param depth: The parameter "depth" represents the current depth of the search tree. It is used
+        to control the depth of the search and determine when to stop the recursive calls
+        :return: a tuple containing the maximum value found during the search and the action that led to
+        that maximum value.
+        """
         v = -999999999
         # ExpectedMaxDepth = 5
         # get all actions
